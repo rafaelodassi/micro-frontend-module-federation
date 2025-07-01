@@ -12,6 +12,7 @@ export default defineConfig({
         __dirname,
         '../../packages/tailwind-config'
       ),
+      '@': path.resolve(__dirname, './src'),
     },
   },
 });

@@ -1,11 +1,16 @@
 {
   "name": "micro-frontend-module-federation",
   "private": true,
-  "version": "0.0.0",  
+  "version": "0.0.0",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
+  "scripts": {
+    "start": "concurrently \"npm run start --workspace shell\" \"npm run start --workspace header\"",
+    "build": "npm run build --workspace shell && npm run build --workspace header",
+    "serve": "concurrently \"npm run serve --workspace shell\" \"npm run serve --workspace header\""
+  },
   "devDependencies": {
     "concurrently": "^9.2.0"
   }
