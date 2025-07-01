@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 
 import ProductsBanner from './assets/img/products-banner.png';
+import { Button } from 'ui';
 
 const Header = lazy(() => import('remoteHeader/Header'));
 
@@ -20,6 +21,7 @@ function App() {
                 nutrient-rich products that cater to your health conscious
                 lifestyle.
               </p>
+              <Button />
               <button className='uppercase bg-white w-[200px] h-[60px] rounded-[5px] flex items-center justify-center mt-7 text-2xl font-semibold text-green-primary hover:opacity-80 transition-all hover:cursor-pointer'>
                 Learn More
               </button>

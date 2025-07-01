@@ -1,7 +1,7 @@
-import Header from './components/Header';
+import { Button } from './components/Button';
 
 const App = () => {
-  return <Header />;
+  return <Button />;
 };
 
 export default App;

@@ -1,7 +1,12 @@
 {
+  "name": "micro-frontend-module-federation",
   "private": true,
+  "version": "0.0.0",  
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
 }
