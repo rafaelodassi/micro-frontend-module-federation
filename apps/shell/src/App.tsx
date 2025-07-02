@@ -6,6 +6,7 @@ import Discount from './assets/img/discount.png';
 import { Button } from 'ui';
 
 const Header = lazy(() => import('remoteHeader/Header'));
+const Cards = lazy(() => import('remoteCards/Cards'));
 const Footer = lazy(() => import('remoteFooter/Footer'));
 
 function App() {
@@ -36,9 +37,10 @@ function App() {
         <img src={ProductsBanner} />
       </div>
       <div className='px-10 py-8'>
-        <h1 className='text-black font-semibold text-[30px] uppercase'>
+        <h1 className='text-black font-semibold text-[30px] uppercase mb-8'>
           Category
         </h1>
+        asas
       </div>
       <div className='px-10 py-8'>
         <h1 className='text-black font-semibold text-[30px] uppercase mb-8'>
@@ -79,6 +81,9 @@ function App() {
         <h1 className='text-black font-semibold text-[30px] uppercase'>
           All Products
         </h1>
+        <Suspense fallback={<p>Carregando...</p>}>
+          <Cards />
+        </Suspense>
       </div>
       <Suspense fallback={<p>Carregando...</p>}>
         <Footer />

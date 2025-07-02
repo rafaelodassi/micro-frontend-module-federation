@@ -10,15 +10,19 @@ export default defineConfig({
     react(),
     tailwindcss(),
     federation({
-      name: 'shell',
-      remotes: {
-        remoteHeader: 'http://localhost:3001/assets/remoteEntry.js',
-        remoteCards: 'http://localhost:3002/assets/remoteEntry.js',
-        remoteFooter: 'http://localhost:3003/assets/remoteEntry.js',
+      name: 'cards',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Cards': './src/components/Cards',
       },
       shared: ['react', 'react-dom'],
     }),
   ],
+  build: {
+    target: 'esnext',
+    minify: false,
+    cssCodeSplit: false,
+  },
   resolve: {
     alias: {
       ui: path.resolve(__dirname, '../../packages/ui'),
