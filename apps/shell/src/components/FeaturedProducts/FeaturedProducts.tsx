@@ -1,0 +1,43 @@
+import { Button } from 'ui';
+import ProductsCard1 from '../../assets/img/products-card1.png';
+import Discount from '../../assets/img/discount.png';
+
+const FeaturedProducts = () => {
+  return (
+    <div className='px-10 py-8'>
+      <h1 className='text-black font-semibold text-[30px] uppercase mb-8'>
+        Featured Products
+      </h1>
+      <div className='flex gap-9'>
+        <div className='rounded-[10px] bg-yellow-primary h-[574px] basis-[554px] flex items-center justify-center flex-col p-6 text-center'>
+          <h1 className='block font-semibold text-2xl uppercase mb-3'>
+            Fresh Vegetables
+          </h1>
+          <h1 className='block font-semibold text-5xl uppercase'>Big Sale</h1>
+          <img src={ProductsCard1} />
+        </div>
+        <div className='flex flex-col gap-9 grow'>
+          <div className='rounded-[10px] bg-pink-primary/67 h-[267px] bg-[url(./assets/img/products-card2.png)] bg-contain bg-no-repeat bg-top-left p-6 text-center flex flex-col items-end justify-center'>
+            <div>
+              <div className='text-white flex items-center gap-2'>
+                <h1 className='text-2xl uppercase'>Fresh Fruit</h1>
+                <h1 className='text-3xl font-semibold uppercase'>Super Sale</h1>
+              </div>
+              <Button className='uppercase h-[55px] text-[20px] font-semibold mt-6'>
+                Shop Now
+              </Button>
+            </div>
+          </div>
+          <div className='rounded-[10px] bg-orange-primary h-[267px] bg-[url(./assets/img/products-card3.png)] bg-contain bg-no-repeat bg-bottom-right p-6 pl-16 pr-16 text-center flex flex-col items-start justify-center gap-1'>
+            <img src={Discount} />
+            <h1 className='uppercase text-white text-[14px]'>
+              Enjoy Your Fresh Drink
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export { FeaturedProducts };
