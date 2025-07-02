@@ -46,6 +46,10 @@
   --font-montserrat: "Montserrat", sans-serif;
   --color-green-primary: #0b6434;
   --color-green-secondary: #679a7f;
+  --color-green-tertiary: #c6ead7;
+  --color-yellow-primary: #c8a938;
+  --color-pink-primary: #fd5151;
+  --color-orange-primary: #ff9564;
 }
 
 :root {

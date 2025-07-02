@@ -1,6 +1,7 @@
 import Logo from '../../assets/img/logo.svg?inline';
 import Notification from '../../assets/icons/notification.svg?inline';
 import User from '../../assets/icons/user.svg?inline';
+import { ShoppingCart } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -36,6 +37,9 @@ const Header = () => {
         </ul>
       </nav>
       <div className='flex items-center justify-center gap-3.5'>
+        <div className='size-10 bg-green-secondary/33 rounded-full flex items-center justify-center'>
+          <ShoppingCart className='text-[#2b2b2b]' />
+        </div>
         <div className='size-10 bg-green-secondary/33 rounded-full flex items-center justify-center'>
           <img src={Notification} alt='Notification' />
         </div>
