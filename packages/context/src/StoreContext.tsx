@@ -1,26 +1,24 @@
-import React from "react";
+import { createContext, useState, useContext, type ReactNode } from "react";
 
 interface StoreContext {
-  viewMode: string;
-  setViewMode: (viewMode: string) => void;
+  selectedCategory: string;
+  setSelectedCategory: (categoryName: string) => void;
 }
 
 interface StoreProvider {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export const StoreContext = React.createContext<StoreContext | undefined>(
-  undefined
-);
+export const StoreContext = createContext<StoreContext | undefined>(undefined);
 
 export const StoreProvider = ({ children }: StoreProvider) => {
-  const [viewMode, setViewMode] = React.useState("list");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   return (
     <StoreContext.Provider
       value={{
-        viewMode,
-        setViewMode,
+        selectedCategory,
+        setSelectedCategory,
       }}
     >
       {children}
@@ -29,10 +27,10 @@ export const StoreProvider = ({ children }: StoreProvider) => {
 };
 
 export const useStore = () => {
-  const context = React.useContext(StoreContext);
+  const context = useContext(StoreContext);
 
   if (!context) {
-    throw new Error("useLayout must be used within a StoreProvider");
+    throw new Error("useStore must be used within a StoreProvider");
   }
 
   return context;

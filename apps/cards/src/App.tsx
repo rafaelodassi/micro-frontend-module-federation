@@ -4,7 +4,7 @@ import Cards from './components/Cards';
 const App = () => {
   return (
     <StoreProvider>
-      <Cards />
+      <Cards data={[]} />
     </StoreProvider>
   );
 };

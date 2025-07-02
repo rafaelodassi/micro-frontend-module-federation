@@ -4,16 +4,18 @@ import Discount from '../../assets/img/discount.png';
 
 const FeaturedProducts = () => {
   return (
-    <div className='px-10 py-8'>
+    <div className='px-10 pt-8'>
       <h1 className='text-black font-semibold text-[30px] uppercase mb-8'>
         Featured Products
       </h1>
       <div className='flex gap-9'>
         <div className='rounded-[10px] bg-yellow-primary h-[574px] basis-[554px] flex items-center justify-center flex-col p-6 text-center'>
-          <h1 className='block font-semibold text-2xl uppercase mb-3'>
+          <h1 className='block font-semibold text-2xl uppercase'>
             Fresh Vegetables
           </h1>
-          <h1 className='block font-semibold text-5xl uppercase'>Big Sale</h1>
+          <h1 className='block font-semibold text-[44px] uppercase'>
+            Big Sale
+          </h1>
           <img src={ProductsCard1} />
         </div>
         <div className='flex flex-col gap-9 grow'>
