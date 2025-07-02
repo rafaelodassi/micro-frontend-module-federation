@@ -15,7 +15,16 @@ export default defineConfig({
       exposes: {
         './Header': './src/components/Header',
       },
-      shared: ['react', 'react-dom'],
+      shared: [
+        'react',
+        'react-dom',
+        {
+          context: {
+            requiredVersion: require('../../packages/context/package.json')
+              .version,
+          },
+        },
+      ],
     }),
   ],
   build: {
@@ -30,6 +39,7 @@ export default defineConfig({
         __dirname,
         '../../packages/tailwind-config'
       ),
+      context: path.resolve(__dirname, '../../packages/context'),
     },
   },
 });

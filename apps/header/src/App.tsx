@@ -1,7 +1,12 @@
+import { StoreProvider } from 'context';
 import Header from './components/Header';
 
 const App = () => {
-  return <Header />;
+  return (
+    <StoreProvider>
+      <Header />
+    </StoreProvider>
+  );
 };
 
 export default App;

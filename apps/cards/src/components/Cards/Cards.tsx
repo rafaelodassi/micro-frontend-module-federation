@@ -1,5 +1,9 @@
+import { useStore } from 'context';
+
 const Cards = () => {
-  return <div>aasas</div>;
+  const { viewMode } = useStore();
+
+  return <div>Nome: {viewMode}</div>;
 };
 
 export default Cards;

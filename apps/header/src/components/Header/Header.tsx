@@ -2,11 +2,20 @@ import Logo from '../../assets/img/logo.svg?inline';
 import Notification from '../../assets/icons/notification.svg?inline';
 import User from '../../assets/icons/user.svg?inline';
 import { ShoppingCart } from 'lucide-react';
+import { useStore } from 'context';
 
 const Header = () => {
+  const { setViewMode } = useStore();
+
   return (
     <header className='bg-white h-20 px-10 py-5 flex items-center justify-center gap-2'>
-      <img src={Logo} alt='Logo' />
+      <img
+        src={Logo}
+        alt='Logo'
+        onClick={() => {
+          setViewMode('sdsdd');
+        }}
+      />
       <nav className='grow'>
         <ul className='flex items-center justify-center gap-[75px] text-[20px]'>
           <li>

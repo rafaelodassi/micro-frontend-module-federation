@@ -16,7 +16,16 @@ export default defineConfig({
         remoteCards: 'http://localhost:3002/assets/remoteEntry.js',
         remoteFooter: 'http://localhost:3003/assets/remoteEntry.js',
       },
-      shared: ['react', 'react-dom'],
+      shared: [
+        'react',
+        'react-dom',
+        {
+          context: {
+            requiredVersion: require('../../packages/context/package.json')
+              .version,
+          },
+        },
+      ],
     }),
   ],
   resolve: {
@@ -26,6 +35,7 @@ export default defineConfig({
         __dirname,
         '../../packages/tailwind-config'
       ),
+      context: path.resolve(__dirname, '../../packages/context'),
     },
   },
 });

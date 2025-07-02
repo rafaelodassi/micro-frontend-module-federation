@@ -4,6 +4,7 @@ import ProductsBanner from './assets/img/products-banner.png';
 import ProductsCard1 from './assets/img/products-card1.png';
 import Discount from './assets/img/discount.png';
 import { Button } from 'ui';
+import { StoreProvider } from 'context';
 
 const Header = lazy(() => import('remoteHeader/Header'));
 const Cards = lazy(() => import('remoteCards/Cards'));
@@ -11,7 +12,7 @@ const Footer = lazy(() => import('remoteFooter/Footer'));
 
 function App() {
   return (
-    <>
+    <StoreProvider>
       <Suspense fallback={<p>Carregando...</p>}>
         <Header />
       </Suspense>
@@ -88,7 +89,7 @@ function App() {
       <Suspense fallback={<p>Carregando...</p>}>
         <Footer />
       </Suspense>
-    </>
+    </StoreProvider>
   );
 }
 
