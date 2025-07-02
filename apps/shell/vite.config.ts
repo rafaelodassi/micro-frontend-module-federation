@@ -31,10 +31,6 @@ export default defineConfig({
   resolve: {
     alias: {
       ui: path.resolve(__dirname, '../../packages/ui'),
-      'tailwind-config': path.resolve(
-        __dirname,
-        '../../packages/tailwind-config'
-      ),
       context: path.resolve(__dirname, '../../packages/context'),
     },
   },
