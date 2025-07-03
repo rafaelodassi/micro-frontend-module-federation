@@ -5,6 +5,8 @@ import { Banner } from './components/Banner';
 import { Category } from './components/Category';
 import { FeaturedProducts } from './components/FeaturedProducts';
 import { Products } from './components/Products';
+import { LoadingHeader } from './components/LoadingHeader';
+import { LoadingFooter } from './components/LoadingFooter';
 import { useFetchData } from './hooks/useFetchData';
 import type { ResponseProducts } from './services/types';
 
@@ -29,14 +31,14 @@ function App() {
 
   return (
     <StoreProvider>
-      <Suspense fallback={<p>Carregando...</p>}>
+      <Suspense fallback={<LoadingHeader />}>
         <Header />
       </Suspense>
       <Banner />
       <Category data={categories} error={error} loading={loading} />
       <FeaturedProducts />
       <Products data={products} error={error} loading={loading} />
-      <Suspense fallback={<p>Carregando...</p>}>
+      <Suspense fallback={<LoadingFooter />}>
         <Footer />
       </Suspense>
     </StoreProvider>
