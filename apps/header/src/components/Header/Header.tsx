@@ -1,10 +1,21 @@
 import Logo from '../../assets/img/logo.svg?inline';
 import Notification from '../../assets/icons/notification.svg?inline';
 import User from '../../assets/icons/user.svg?inline';
-import { ShoppingCart, CircleMinus, CirclePlus } from 'lucide-react';
-import { Popover, PopoverContent, PopoverTrigger } from 'ui';
+import { ShoppingCart, CircleMinus, CirclePlus, Menu } from 'lucide-react';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTrigger,
+} from 'ui';
 import { useStore } from 'context';
 import { type Product } from 'types';
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 const Header = () => {
   const { cart, addProductCart, removeProductCart } = useStore();
@@ -27,11 +38,21 @@ const Header = () => {
     return cart.find((p) => p.id === id)?.count ?? 0;
   };
 
-  return (
-    <header className='bg-white h-20 px-10 py-5 flex items-center justify-center gap-2'>
-      <img src={Logo} />
-      <nav className='grow'>
-        <ul className='flex items-center justify-center gap-[75px] text-[20px]'>
+  const navMenu = (insideSheet: boolean) => {
+    return (
+      <nav
+        className={twMerge(
+          clsx('grow max-md:hidden', insideSheet && 'max-md:block')
+        )}
+      >
+        <ul
+          className={twMerge(
+            clsx(
+              'flex items-center justify-evenly text-[20px] gap-4',
+              insideSheet && 'flex-col items-start'
+            )
+          )}
+        >
           <li>
             <a className='hover:text-green-primary transition-all' href='#'>
               Home
@@ -59,6 +80,23 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+    );
+  };
+
+  return (
+    <header className='bg-white h-20 px-10 py-5 flex items-center justify-center gap-2'>
+      <Sheet>
+        <SheetTrigger>
+          <Menu className='hover:cursor-pointer hover:text-green-primary transition-all shrink-0 hidden max-md:block' />
+        </SheetTrigger>
+        <SheetContent side='left' className='w-full'>
+          <SheetHeader>
+            <SheetDescription>{navMenu(true)}</SheetDescription>
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
+      <img src={Logo} />
+      {navMenu(false)}
       <div className='flex items-center justify-center gap-3.5'>
         <Popover>
           <PopoverTrigger>
@@ -99,10 +137,10 @@ const Header = () => {
             )}
           </PopoverContent>
         </Popover>
-        <div className='size-10 bg-green-secondary/33 rounded-full flex items-center justify-center'>
+        <div className='size-10 bg-green-secondary/33 rounded-full flex items-center justify-center max-md:hidden'>
           <img src={Notification} />
         </div>
-        <div className='size-10 bg-green-secondary/33 rounded-full flex items-center justify-center'>
+        <div className='size-10 bg-green-secondary/33 rounded-full flex items-center justify-center max-md:hidden'>
           <img src={User} />
         </div>
       </div>
