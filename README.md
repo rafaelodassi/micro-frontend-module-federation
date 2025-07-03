@@ -2,12 +2,27 @@
 
 Aplicação em ReactJS com micro front-end utilizando Module Federation.
 
-## 📂 Estrutura
+## 📂 Estrutura do projeto
 
-Estrutura do projeto
+```bash
+├── apps
+│   ├── shell
+│   ├── header
+│   ├── cards
+│   └── footer
+└── packages
+    ├── context
+    ├── types
+    └── ui
+```
 
-- [React] - Biblioteca para web e interfaces de usuário
-- TypeScript
+- apps: Micro front-ends
+- shell: Aplicação que gerencia os micro front-ends
+- header: Aplicação que contém o header
+- cards: Aplicação que contém os cards dos produtos
+- footer: Aplicação que contém o footer
+- packages: Pacotes compartilhados entre os micro front-ends
+- packages: Pacotes compartilhados entre os micro front-ends
 
 ## 🚀 Começando
 
