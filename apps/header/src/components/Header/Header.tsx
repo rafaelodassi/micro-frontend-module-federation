@@ -83,6 +83,12 @@ const Header = () => {
     );
   };
 
+  const getTotal = () => {
+    return cart.reduce((acc, cur) => {
+      return acc + cur.price * cur.count;
+    }, 0);
+  };
+
   return (
     <header className='bg-white h-20 px-10 py-5 flex items-center justify-center gap-2'>
       <Sheet>
@@ -121,6 +127,9 @@ const Header = () => {
                     <span className='font-semibold text-[12px] grow'>
                       {p.title}
                     </span>
+                    <span className='font-semibold text-[12px]'>
+                      ৳{p.price}
+                    </span>
                     <div className='flex items-center justify-center gap-1'>
                       <CircleMinus
                         size={14}
@@ -138,7 +147,7 @@ const Header = () => {
                 ))}
                 <div className='w-full pt-3 flex items-center justify-center'>
                   <span className='grow'>Total</span>
-                  <span className='font-semibold'>৳23232</span>
+                  <span className='font-semibold'>৳{getTotal()}</span>
                 </div>
               </div>
             )}
