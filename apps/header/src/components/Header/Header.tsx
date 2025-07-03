@@ -107,7 +107,7 @@ const Header = () => {
               </div>
             </div>
           </PopoverTrigger>
-          <PopoverContent align='end'>
+          <PopoverContent align='end' className='max-md:w-screen'>
             {!cart.length ? (
               <span>Empty Cart</span>
             ) : (

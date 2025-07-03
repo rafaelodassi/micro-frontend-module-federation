@@ -1,10 +1,10 @@
 import { Button } from 'ui';
-import ProductsBanner from '../../assets/img/products-banner.png';
 
 const Banner = () => {
   return (
-    <div className='bg-green-primary w-full h-[408px] px-10 flex items-center justify-center'>
-      <div className='grow'>
+    <div className='bg-green-primary w-full min-h-[408px] p-10 flex items-center justify-center bg-[url(./assets/img/products-banner.png)] bg-contain bg-no-repeat bg-right relative'>
+      <div className='absolute inset-0 w-full h-full bg-green-primary z-0 opacity-0 max-lg:opacity-70 transition-all'></div>
+      <div className='grow z-10 relative'>
         <div className='max-w-[432px]'>
           <h1 className='text-white font-semibold text-4xl uppercase leading-12'>
             Healthy and Fresh Grocery
@@ -22,7 +22,6 @@ const Banner = () => {
           </Button>
         </div>
       </div>
-      <img src={ProductsBanner} />
     </div>
   );
 };

@@ -41,7 +41,6 @@ const Category = ({ data, error, loading }: CategoryProps) => {
           className='w-[calc(100%-96px)]'
           opts={{
             align: 'center',
-            loop: true,
           }}
         >
           <CarouselContent>
@@ -50,7 +49,7 @@ const Category = ({ data, error, loading }: CategoryProps) => {
                 key={category.id}
                 className={twMerge(
                   clsx(
-                    'basis-1/4 flex flex-col items-center justify-center gap-1 hover:cursor-pointer hover:text-green-primary transition-all',
+                    'flex flex-col items-center justify-center gap-1 hover:cursor-pointer hover:text-green-primary basis-1/4 max-lg:basis-1/3 max-md:basis-1/2 max-sm:basis-full',
                     selectedCategory === '' && i === 0 && 'text-green-primary',
                     selectedCategory === category.name && 'text-green-primary'
                   )
