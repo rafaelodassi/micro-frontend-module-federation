@@ -47,27 +47,27 @@ http://localhost:3000/
 ```
 cd micro-frontend-module-federation/apps/shell
 npm install
-npm run start //rodar para dev
-npm run serve //rodar para prod
-//Abrir http://localhost:3000/
+npm run start # Rodar para dev
+npm run serve # Rodar para prod
+# Abrir http://localhost:3000/
 
 cd micro-frontend-module-federation/apps/header
 npm install
-npm run start //rodar para dev
-npm run serve //rodar para prod
-//Abrir http://localhost:3001/
+npm run start # Rodar para dev
+npm run serve # Rodar para prod
+# Abrir http://localhost:3001/
 
 cd micro-frontend-module-federation/apps/cards
 npm install
-npm run start //rodar para dev
-npm run serve //rodar para prod
-//Abrir http://localhost:3002/
+npm run start # Rodar para dev
+npm run serve # Rodar para prod
+# Abrir http://localhost:3002/
 
 cd micro-frontend-module-federation/apps/footer
 npm install
-npm run start //rodar para dev
-npm run serve //rodar para prod
-//Abrir http://localhost:3003/
+npm run start # Rodar para dev
+npm run serve # Rodar para prod
+# Abrir http://localhost:3003/
 ```
 
 ## ⚙️ Executando os testes

@@ -111,9 +111,12 @@ const Header = () => {
             {!cart.length ? (
               <span>Empty Cart</span>
             ) : (
-              <div>
+              <div className='flex items-center justify-center flex-col'>
                 {cart.map((p) => (
-                  <div key={p.id} className='flex items-center gap-2'>
+                  <div
+                    key={p.id}
+                    className='flex items-center gap-2 w-full border-b py-1 first:p-0'
+                  >
                     <img src={p.thumbnail} className='h-[50px]' />
                     <span className='font-semibold text-[12px] grow'>
                       {p.title}
@@ -133,6 +136,10 @@ const Header = () => {
                     </div>
                   </div>
                 ))}
+                <div className='w-full pt-3 flex items-center justify-center'>
+                  <span className='grow'>Total</span>
+                  <span className='font-semibold'>৳23232</span>
+                </div>
               </div>
             )}
           </PopoverContent>
