@@ -42,30 +42,32 @@ Abrir a url do projeto no navegador
 http://localhost:3000/
 ```
 
-### 🔧 Rodar cada micro front-end separadamente
-
-Ir para a pasta do projeto
+### 📦 Rodar cada micro front-end separadamente
 
 ```
-cd micro-frontend-module-federation
-```
-
-Instalar dependências
-
-```
+cd micro-frontend-module-federation/apps/shell
 npm install
-```
+npm run start //rodar para dev
+npm run serve //rodar para prod
+//Abrir http://localhost:3000/
 
-Rodar o projeto local
+cd micro-frontend-module-federation/apps/header
+npm install
+npm run start //rodar para dev
+npm run serve //rodar para prod
+//Abrir http://localhost:3001/
 
-```
-npm run serve
-```
+cd micro-frontend-module-federation/apps/cards
+npm install
+npm run start //rodar para dev
+npm run serve //rodar para prod
+//Abrir http://localhost:3002/
 
-Abrir a url do projeto no navegador
-
-```
-http://localhost:3000/
+cd micro-frontend-module-federation/apps/footer
+npm install
+npm run start //rodar para dev
+npm run serve //rodar para prod
+//Abrir http://localhost:3003/
 ```
 
 ## ⚙️ Executando os testes
