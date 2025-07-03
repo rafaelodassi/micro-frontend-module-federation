@@ -9,7 +9,7 @@ interface ProductsProps {
   loading: boolean;
 }
 
-const Products = ({ data, error, loading }: ProductsProps) => {
+const Products = ({ data }: ProductsProps) => {
   return (
     <div className='px-10 pt-8 pb-10'>
       <h1 className='text-black font-semibold text-[30px] uppercase mb-8'>

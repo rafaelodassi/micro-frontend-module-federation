@@ -18,7 +18,7 @@ interface CategoryProps {
   loading: boolean;
 }
 
-const Category = ({ data, error, loading }: CategoryProps) => {
+const Category = ({ data }: CategoryProps) => {
   const { setSelectedCategory, selectedCategory } = useStore();
 
   const handleSelectCategory = (categoryName: string) => {
