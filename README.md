@@ -22,7 +22,9 @@ Aplicação em ReactJS com micro front-end utilizando Module Federation.
 - cards: Aplicação que contém os cards dos produtos
 - footer: Aplicação que contém o footer
 - packages: Pacotes compartilhados entre os micro front-ends
-- packages: Pacotes compartilhados entre os micro front-ends
+- context: Aplicação que compartilha a store entre os micro front-ends
+- types: Aplicação que compartilha a tipagem entre os micro front-ends
+- ui: Aplicação que compartilha os componentes entre os micro front-ends
 
 ## 🚀 Começando
 
