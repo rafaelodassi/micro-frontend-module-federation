@@ -10,7 +10,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 - NodeJS 22.12.0 ou maior instalado na máquina local
 
-### 🔧 Instalação
+### 🔧 Rodar o projeto localmente
 
 Clonar ou baixar o projeto
 
