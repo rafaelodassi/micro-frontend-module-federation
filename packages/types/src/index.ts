@@ -36,6 +36,13 @@ interface Product {
   };
   thumbnail: string;
   images: string[];
+  count: number;
 }
 
-export type { Product };
+interface Category {
+  id: string;
+  name: string;
+  thumbnail: string;
+}
+
+export type { Product, Category };

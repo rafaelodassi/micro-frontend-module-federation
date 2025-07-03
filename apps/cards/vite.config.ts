@@ -36,6 +36,7 @@ export default defineConfig({
     alias: {
       ui: path.resolve(__dirname, '../../packages/ui'),
       context: path.resolve(__dirname, '../../packages/context'),
+      types: path.resolve(__dirname, '../../packages/types'),
     },
   },
 });

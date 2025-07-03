@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { useStore } from 'context';
-import type { Category as CategoryType } from '../../services/types';
+import type { Category as CategoryType } from 'types';
 
 import {
   Carousel,

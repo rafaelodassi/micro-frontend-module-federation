@@ -20,6 +20,7 @@
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.11",
     "ui": "*",
+    "types": "*",
     "uuid": "^11.1.0"
   },
   "devDependencies": {

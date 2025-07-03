@@ -16,7 +16,9 @@
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.11",
     "ui": "*",
-    "context": "*"
+    "context": "*",
+    "types": "*",
+    "lucide-react": "^0.525.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

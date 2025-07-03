@@ -5,7 +5,8 @@
   "main": "./src/index.ts",
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "types": "*"
   },
   "devDependencies": {
     "@types/react": "^19.1.8",

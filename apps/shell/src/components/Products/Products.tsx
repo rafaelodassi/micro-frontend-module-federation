@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import type { Product } from '../../services/types';
+import type { Product } from 'types';
 
 const Cards = lazy(() => import('remoteCards/Cards'));
 
