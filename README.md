@@ -94,20 +94,6 @@ npm run serve # Rodar para prod
 # Abrir http://localhost:3003/
 ```
 
-## ⚙️ Executando os testes
-
-Execute os testes
-
-```bash
-npm run test
-```
-
-Veja a cobertura dos testes
-
-```bash
-npm run test:coverage
-```
-
 ## 🛠️ Construído com
 
 Principais ferramentas utilizadas no projeto
