@@ -121,7 +121,7 @@ const Header = () => {
                 {cart.map((p) => (
                   <div
                     key={p.id}
-                    className='flex items-center gap-2 w-full border-b py-1 first:p-0'
+                    className='flex items-center gap-2 w-full border-b py-1 first:pt-0'
                   >
                     <img src={p.thumbnail} className='h-[50px]' />
                     <span className='font-semibold text-[12px] grow'>
@@ -147,7 +147,9 @@ const Header = () => {
                 ))}
                 <div className='w-full pt-3 flex items-center justify-center'>
                   <span className='grow'>Total</span>
-                  <span className='font-semibold'>৳{getTotal()}</span>
+                  <span className='font-semibold'>
+                    ৳{getTotal().toFixed(2)}
+                  </span>
                 </div>
               </div>
             )}
